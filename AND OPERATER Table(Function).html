@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA/TABLE</title>
+    <link rel="icon" href="../assets/imges/math.avif">
+</head>
+<style>
+    body{
+        margin: 0%;
+        font-family: sans-serif;
+        background-image: url(../assets/imges/math.avif);
+    }
+    
+    .container{
+        text-align: center;
+        background-color: rgba(85, 85, 195, 0.724);
+        width: 100%;
+        height: 700px;
+        padding-top:80px ;
+    }
+
+    table {
+        margin:auto ;
+        width: 900px ;
+        background: linear-gradient(rgb(238, 246, 12),rgb(233, 21, 85));
+        border-collapse: collapse;
+        border: 2px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+
+
+    }
+
+    th{
+        border: 5px solid black;
+        font-size: 25px;
+        padding: 20px;
+        color: rgb(0, 0, 0);
+    }
+    td {
+        border: 2px solid rgb(5, 5, 5);
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+    }
+</style>
+
+          <!-- <.......................  USING (AND) OPERATER .....................>
+           POINT{
+            IF CONDITION TRUE AND ANOTHER ONE IS FALSE THATS MEAN ANS IS FALSE.
+            IF BOTH CONDITIONS ARE TRUE THEN ANS BECOME TRUE. 
+            }-->
+
+<body>
+    <div class="container ">
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Subject Marks</th>
+            <th> Obtained Marks</th>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td>100</td>
+            <td id="math"></td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>100</td>
+            <td id="english"></td>
+        </tr>
+        <tr>
+            <td>Urdu</td>
+            <td>100</td>
+            <td id="urdu"></td>
+        </tr>
+        <tr>
+            <td>Islamiyat</td>
+            <td>100</td>
+            <td id="islamiyat"></td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>100</td>
+            <td id="computer"></td>
+        </tr>
+        <tr>
+            <th>Grade</th>
+            <th>Per%</th>
+            <th>TOTAL</th>
+
+        </tr>
+        <tr>
+            <td id="grade1"></td>
+            <td id="grade"></td>
+            <td id="obt"></td>
+        </tr>
+    </table>
+    <form action="">
+    <input type="text" name="" id="nic">
+</form>
+</div>
+</body>
+<script>
+    let math = parseInt(prompt("Enter math marks"));
+    let urdu = parseInt(prompt("Enter urdu marks"));
+    let islamiyat = parseInt(prompt("Enter islamiyat marks"));
+    let english = parseInt(prompt("Enter english marks"));
+    let computer = parseInt(prompt("Enter computer marks")); 
+    
+    document.getElementById("math").innerHTML = math;
+    document.getElementById("urdu").innerHTML = urdu;
+    document.getElementById("islamiyat").innerHTML = islamiyat;
+    document.getElementById("english").innerHTML = english;
+    document.getElementById("computer").innerHTML = computer;
+
+    let obt = math + urdu + islamiyat + english + computer;
+    let subject = 100 * 5;
+    let per = (obt / subject) * 100;
+
+    
+    document.getElementById("obt").innerHTML = obt;
+    document.getElementById("grade").innerHTML = per.toFixed(2);
+
+    
+    if (per >= 90 && per <= 100) {
+        grade = "A+"
+
+    }
+
+    else if (per >= 80 && per <= 89) {
+        grade = "A"
+
+    }
+
+    else if (per >= 70 && per <= 79) {
+        grade = "B";
+    }
+
+    else if (per >= 60 && per <= 69) {
+        grade = "C"
+
+    }
+
+    else if (per >= 50 && per <= 59) {    
+        grade = "D"
+
+    }
+
+    else if (per >= 40 && per <= 49) {
+        grade = "E"
+
+
+    }
+
+    else if (per >= 30 && per <= 39) {       
+        grade = "F"
+
+    }
+
+    else (grade="FAIL")
+    document.getElementById("grade1").innerHTML = grade;
+
+    // <.................. NIC .....................>
+
+    
+    if(nic<=19 ){
+        console.log("YOU ARE APPLICABLE FOR NIC")
+    }
+    else{
+        console.log("YOU ARE NOT APPLICABLE FOR NIC")
+    }
+    let nic =parseInt(prompt("ENTER AGE"))
+    document.getElementById("age").innerHTML = nic;
+
+</script>
+</html>

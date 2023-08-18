@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON-CLICK</title>
+    <link rel="stylesheet" href="../assets/links/bootstrap.css">
+    <link rel="stylesheet" href="../assets/links/code.jquery.com_jquery-3.7.0.min.js">
+    <style>
+      * {
+        font-family: sans-serif;
+        text-align: center;
+        font-weight: bolder ;
+        
+        
+
+      }
+      .container {
+        background-color: burlywood;
+        color: black;
+        height: 800px;
+        width: 600px;
+        border: 5px dashed black;
+        border-radius: 10px; 
+        padding: 5px 0px; 
+         margin-top:10px;
+        
+      }
+      .line {
+        border: 2px solid black;
+        background-color: black;
+      }
+      .content p {
+        display: flex;
+        margin-left: 10rem;
+      }
+      .content button {
+        background-color: blue;
+        color: white;
+        border: 3px solid white ;
+        border-radius: 10px;
+        height: 5
+        0px;
+        margin-left: -1em ;
+        margin-bottom: 10px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="on-click">
+      
+         <h1 style="background-color: black; color: aliceblue; text-align: center;">ON-CLICK(BUTTON)</h1>
+        <div class="content ">
+
+          <!-- <....................... Text Change When Click ..........................>  -->
+         <p id="demo"></p>      
+         <button type=" button " onclick="document.getElementById('demo').innerHTML = ' WELCOME IN JAVASCRIPT '"> CLICK ME !</button>
+
+         <div class="line"></div>
+
+         <!-- <......................... TEXT APPEAR WHEN CLICK  .........................> -->
+
+         <p id="exp">WHAT WE DO TODAY?</p>
+         <button type=" button " onclick="document.getElementById('exp').innerHTML = ' TODAY WE LEARN ABOUT JAVASCRIPT '"> CLICK ME !</button>
+
+         <div class="line"></div>
+
+         <!-- <............................ FORM (ADDITION) ......................> -->
+
+          <div class="form">
+
+            <h2>ADD</h2>
+
+           <label for="num1">NUMBER-1 
+             <input type="number" id="num1" value="number" placeholder="num1" >
+           </label>
+
+           <label for="num2">NUMBER-2 
+             <input type="number" id="num2" value="number" placeholder="num2" >
+           </label>
+
+          
+           <p id="add"></p>
+                    
+           <button type=" button " onclick="sum()"> CLICK ME !</button>
+           <br>
+           <br>
+
+           <!-- <.......................... SUBTRACT ............................> -->
+
+           <h2>SUBTRACT</h2>
+
+           <label for="num3">NUMBER-1 
+            <input type="number" id="num3" value="number" placeholder="num1" >
+           </label>
+
+           <label for="num4">NUMBER-2 
+            <input type="number" id="num4" value="number" placeholder="num2" >
+           </label>
+
+         
+           <p id="add"></p>
+                    
+           <button type=" button " onclick="sub()"> CLICK ME !</button>
+
+          </div>    
+      
+        </div>
+      </div>
+    </div>
+
+   
+   
+    </form>
+
+    <script>
+
+          function sum(){
+            let ab = parseInt(document.getElementById("num1").value)
+            let ba = parseInt(document.getElementById("num2").value)
+            let sum= ab+ba ;
+            console.log(sum)
+            document.write(sum)
+          }
+
+          function sub(){
+            let ac = parseInt(document.getElementById("num3").value)
+            let ca = parseInt(document.getElementById("num4").value)
+            let sub= ac-ca ;
+            console.log(sub)
+            document.write(sub)
+          }
+     
+      // let x=2 ;
+      // let y=2 ;
+      // x=y ;
+      // console.log(x)
+      // document.write(x)
+           
+    </script>
+</body>
+</html>
